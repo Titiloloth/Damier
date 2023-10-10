@@ -1,17 +1,25 @@
 let maTable = document.createElement("table");
 document.body.appendChild(maTable);
-for (let nbRows = 1; nbRows <= 8; nbRows++) {
+const monTableau = ["A", "B", "C", "D", "E", "F", "G", "H"]
+for (let nbRows = 0; nbRows <= 8; nbRows++) {
     let uneRow = document.createElement("tr");
     maTable.appendChild(uneRow)
-    for (let nbcells = 1; nbcells <= 8; nbcells++) {
-    let uneCellule = document.createElement("td");
-    let valueCell = (nbRows + nbcells + 1) % 2;
-
-        if (valueCell == 0) {
+    for (let nbcells = 0; nbcells <= 8; nbcells++) {
+        let uneCellule = document.createElement("td");
+        let valueCell = (nbRows + nbcells + 1) % 2;
+        if (nbRows==0 || nbcells == 0) {
+            uneCellule.style.border = "none";
+            uneCellule.textContent = nbRows;
+            if (nbRows == 0 && nbcells > 0) {
+                uneCellule.textContent = monTableau[nbcells-1]
+            }
+        } else {
+            if (valueCell == 0) {
             uneCellule.style.backgroundColor = "white";
-        } else { 
+            } else { 
             uneCellule.style.backgroundColor = "pink"; 
+            }
         }
     uneRow.appendChild(uneCellule);
-}
+    }
 }
