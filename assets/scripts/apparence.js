@@ -26,7 +26,7 @@ for (let nbRows = 0; nbRows <= 8; nbRows++) {
             } else { 
              uneCellule.style.backgroundColor = "pink"; 
             }
-            let idCell = uneCellule.setAttribute("id",monTableau[nbcells-1] + nbRows);
+             uneCellule.setAttribute("id", nbcells + "-" + nbRows);
         }
 
     uneRow.appendChild(uneCellule);
