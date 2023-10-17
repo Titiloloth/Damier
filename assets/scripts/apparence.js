@@ -1,9 +1,13 @@
 // Damier
-let uneCellule = document.createElement("td");
 
+
+let uneCellule = document.createElement("td");
 let maTable = document.createElement("table");
+
 document.body.appendChild(maTable);
+
 const monTableau = ["A", "B", "C", "D", "E", "F", "G", "H"]
+
 for (let nbRows = 0; nbRows <= 8; nbRows++) {
     let uneRow = document.createElement("tr");
     maTable.appendChild(uneRow)
@@ -24,18 +28,19 @@ for (let nbRows = 0; nbRows <= 8; nbRows++) {
             }
             let idCell = uneCellule.setAttribute("id",monTableau[nbcells-1] + nbRows);
         }
+
     uneRow.appendChild(uneCellule);
+    
     }
 }
-
 
 // Pièces 
 
     // Cavalerie noire
 
-    const arrayPiecesNoires = ["https://i.postimg.cc/BvhJgW4Q/tour-blanc.png", "https://i.postimg.cc/WpXPxjvj/cavalier-blanc.png", "https://i.postimg.cc/pXv3pGM0/fou-blanc.png", 
-    "https://i.postimg.cc/V6LnJQs9/roi-blanc.png", "https://i.postimg.cc/4ywJnqdc/reine-blanc.png", "https://i.postimg.cc/pXv3pGM0/fou-blanc.png","https://i.postimg.cc/WpXPxjvj/cavalier-blanc.png",
-    "https://i.postimg.cc/BvhJgW4Q/tour-blanc.png"]
+    const arrayPiecesNoires = ["https://i.postimg.cc/gjvnXbQH/tour-noir.png", "https://i.postimg.cc/tghfMrKm/cavalier-noir.png", "https://i.postimg.cc/t492gXwD/fou-noir.png", 
+    "https://i.postimg.cc/HnZs7W35/roi-noir.png", "https://i.postimg.cc/tgK6Yk7y/reine-noir.png", "https://i.postimg.cc/t492gXwD/fou-noir.png","https://i.postimg.cc/tghfMrKm/cavalier-noir.png",
+    "https://i.postimg.cc/gjvnXbQH/tour-noir.png"]
     let rowsToPiece3 = document.querySelector("tr:nth-of-type(2)").children;
         for (let index = 1; index < rowsToPiece3.length; index++) {
         let image = document.createElement("img");
@@ -45,7 +50,7 @@ for (let nbRows = 0; nbRows <= 8; nbRows++) {
 }
         // Pions noirs
 
-        const arrayPionsNoirs = ["https://i.postimg.cc/bwKjYk8p/pion-blanc.png"]
+        const arrayPionsNoirs = ["https://i.postimg.cc/ZRQM91pn/pion-noir.png"]
         let rowsToPiece4 = document.querySelector("tr:nth-of-type(3)").children;
             for (let index = 1; index < rowsToPiece4.length; index++) {
             let image = document.createElement("img");
