@@ -22,7 +22,7 @@ for (let nbRows = 0; nbRows <= 8; nbRows++) {
             } else { 
              uneCellule.style.backgroundColor = "pink"; 
             }
-            uneCellule.setAttribute("id",nbRows+ monTableau[nbcells-1]);
+            let idCell = uneCellule.setAttribute("id",monTableau[nbcells-1] + nbRows);
         }
     uneRow.appendChild(uneCellule);
     }
@@ -31,22 +31,49 @@ for (let nbRows = 0; nbRows <= 8; nbRows++) {
 
 // Pièces 
 
-let case8B = document.getElementById("8B");
-            let cavalierBlanc = document.createElement("img");
-            cavalierBlanc.src = "https://i.postimg.cc/WpXPxjvj/cavalier-blanc.png";
-            case8B.appendChild(cavalierBlanc);
+    // Cavalerie noire
 
-let case8A = document.getElementById("8A");
-            let tourBlanche = document.createElement("img");
-            tourBlanche.src = "https://i.postimg.cc/BvhJgW4Q/tour-blanc.png";
-            case8A.appendChild(tourBlanche);
+    const arrayPiecesNoires = ["https://i.postimg.cc/BvhJgW4Q/tour-blanc.png", "https://i.postimg.cc/WpXPxjvj/cavalier-blanc.png", "https://i.postimg.cc/pXv3pGM0/fou-blanc.png", 
+    "https://i.postimg.cc/V6LnJQs9/roi-blanc.png", "https://i.postimg.cc/4ywJnqdc/reine-blanc.png", "https://i.postimg.cc/pXv3pGM0/fou-blanc.png","https://i.postimg.cc/WpXPxjvj/cavalier-blanc.png",
+    "https://i.postimg.cc/BvhJgW4Q/tour-blanc.png"]
+    let rowsToPiece3 = document.querySelector("tr:nth-of-type(2)").children;
+        for (let index = 1; index < rowsToPiece3.length; index++) {
+        let image = document.createElement("img");
+        image.src = arrayPiecesNoires[index-1]
+        rowsToPiece3[index].appendChild(image);
+    
+}
+        // Pions noirs
 
-let case8C = document.getElementById("8C");
-            let fouBlanc = document.createElement("img");
-            fouBlanc.src = "https://i.postimg.cc/pXv3pGM0/fou-blanc.png";
-            case8C.appendChild(fouBlanc);
+        const arrayPionsNoirs = ["https://i.postimg.cc/bwKjYk8p/pion-blanc.png"]
+        let rowsToPiece4 = document.querySelector("tr:nth-of-type(3)").children;
+            for (let index = 1; index < rowsToPiece4.length; index++) {
+            let image = document.createElement("img");
+            image.src = arrayPionsNoirs
+            rowsToPiece4[index].appendChild(image);
+    
+}
 
-let case8D = document.getElementById("8D");
-            let roiBlanc = document.createElement("img");
-            roiBlanc.src = "https://i.postimg.cc/pXv3pGM0/fou-blanc.png";
-            case8D.appendChild(roiBlanc);
+    // Cavalerie blanche
+
+    const arrayPiecesBlanches = ["https://i.postimg.cc/BvhJgW4Q/tour-blanc.png", "https://i.postimg.cc/WpXPxjvj/cavalier-blanc.png", "https://i.postimg.cc/pXv3pGM0/fou-blanc.png", 
+    "https://i.postimg.cc/V6LnJQs9/roi-blanc.png", "https://i.postimg.cc/4ywJnqdc/reine-blanc.png", "https://i.postimg.cc/pXv3pGM0/fou-blanc.png","https://i.postimg.cc/WpXPxjvj/cavalier-blanc.png",
+    "https://i.postimg.cc/BvhJgW4Q/tour-blanc.png"]
+    let rowsToPiece = document.querySelector("tr:nth-of-type(9)").children;
+        for (let index = 1; index < rowsToPiece.length; index++) {
+        let image = document.createElement("img");
+        image.src = arrayPiecesBlanches[index-1]
+        rowsToPiece[index].appendChild(image);
+    
+}
+
+        // Pions blancs
+            
+        const arrayPionsBlancs = ["https://i.postimg.cc/bwKjYk8p/pion-blanc.png"]
+        let rowsToPiece2 = document.querySelector("tr:nth-of-type(8)").children;
+            for (let index = 1; index < rowsToPiece2.length; index++) {
+            let image = document.createElement("img");
+            image.src = arrayPionsBlancs
+            rowsToPiece2[index].appendChild(image);
+    
+}
