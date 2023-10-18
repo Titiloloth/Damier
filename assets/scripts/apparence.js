@@ -26,7 +26,11 @@ for (let nbRows = 0; nbRows <= 8; nbRows++) {
             } else { 
              uneCellule.style.backgroundColor = "pink"; 
             }
-             uneCellule.setAttribute("id", nbcells + "-" + nbRows);
+            let idCell = nbcells + "-" + nbRows
+             uneCellule.setAttribute("id", idCell);
+             uneCellule.addEventListener("click", function () {
+                highlight(idCell)
+             })
         }
 
     uneRow.appendChild(uneCellule);
@@ -41,6 +45,7 @@ for (let nbRows = 0; nbRows <= 8; nbRows++) {
     const arrayPiecesNoires = ["https://i.postimg.cc/gjvnXbQH/tour-noir.png", "https://i.postimg.cc/tghfMrKm/cavalier-noir.png", "https://i.postimg.cc/t492gXwD/fou-noir.png", 
     "https://i.postimg.cc/HnZs7W35/roi-noir.png", "https://i.postimg.cc/tgK6Yk7y/reine-noir.png", "https://i.postimg.cc/t492gXwD/fou-noir.png","https://i.postimg.cc/tghfMrKm/cavalier-noir.png",
     "https://i.postimg.cc/gjvnXbQH/tour-noir.png"]
+
     let rowsToPiece3 = document.querySelector("tr:nth-of-type(2)").children;
         for (let index = 1; index < rowsToPiece3.length; index++) {
         let image = document.createElement("img");

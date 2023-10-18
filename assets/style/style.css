@@ -13,3 +13,8 @@ td {
 .celluleRose {
     background-color: pink;
 }
+
+.pion-selection {
+    border: 3px solid deeppink;
+    border-radius: 100%;
+}
